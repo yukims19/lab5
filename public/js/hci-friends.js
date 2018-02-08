@@ -9,15 +9,20 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	console.log("Javascript connected!");
+	  console.log("Javascript connected!");
+    $(".name").click(function(e){
+        e.preventDefault();
+        $(this).text(anagrammedName($(this).text()))
+    }
+    )
 }
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
-	
+
 	if (name == "Doug Engelbart") {
 		return "Notable Grudge";
-	} 
+	}
 	else if (name == "Ivan Sutherland") {
 		return "Vandal Heist Run";
 	}
